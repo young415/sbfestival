@@ -1,0 +1,121 @@
+@charset "UTF-8";
+@font-face{font-family: "light"; src:url(../font/NanumSquareL.ttf)}
+@font-face{font-family: "regular"; src:url(../font/NanumSquareR.ttf)}
+@font-face{font-family: "bold"; src:url(../font/NanumSquareB.ttf)}
+@font-face{font-family: "extra"; src:url(../font/NanumSquareEB.ttf)}
+@font-face{font-family: "malssami"; src:url(../font/malssami815.ttf)}
+
+body{font-family: "regular"}
+.wrap{}
+#header{position: fixed; width: 100%; height: 100px; z-index: 100}
+#header .nav{width: 100%; height: 100px; background: #f1f1f1; margin: 0 auto; line-height: 80px; padding-left: 45%; box-sizing: border-box; top: -100px; transition: all 0.3s; z-index: 100; box-shadow: 1px 1px 5px rgba(51,51,51,0.2)}
+#header .nav ul{width: 70%; display: flex; justify-content: space-around; padding-top: 10px}
+#header .nav ul li{display: inline-block; transition: all 0.3s}
+#header .nav ul li a{display: block; font-weight: 400; color: #333; font-size: 1.6rem; font-family: "extra"; padding: 0px 20px; box-sizing: border-box; position: absolute; z-index: 20}
+#header .nav ul li a:hover{}
+#header .nav ul li span{width: 0px; height: 20px; background: #FEBF14; position: absolute; top: 45px; display: block; margin-left: 15px; transition: all 0.3s; opacity: 0}
+#header .nav ul li.on span{width: 105px; opacity: 1}
+
+#section{position: fixed; width: 100%; height: 400vh;}
+#section>div{height: 100vh;}
+.logo{float: left; margin-left: 13%; height: 100px;}
+.logo a{display: block; width: 250px; height: 100px; line-height: 145px}
+.logo a img{}
+
+#intro{}
+.intro_inner{width: 100vw; padding-top: 100px; height: 100vh; background: #f1f1f1; position: relative}
+.btn{}
+.btn>div{width: 100px; height: 100px; background-size: cover; background-repeat: no-repeat;position: absolute; z-index: 10; cursor: pointer}
+.pre{background-image: url(../img/btn.png); background-position: left; top: 50%; left: -50px; transform: translateY(-50%)}
+.next{background-image: url(../img/btn.png); background-position: right; top: 50%; right: -50px; transform: translateY(-50%)}
+
+
+.intro_inner .img{position: absolute;width: 80vw; height: 90vh;}
+.slide{width: 80vw; height: 90vh; background: #f1f1f1; margin: 0 auto; position: relative}
+.slide_wrap{position: relative}
+.intro_inner .img1{background-image: url(../img/slide_book2.png) ;background-size: cover; background-position: center center;}
+.intro_inner .img2{background-image: url(../img/slide.png); background-size: cover; background-position: center center; }
+
+#program{background: #f1f1f1; box-sizing: border-box}
+.program_inner{width: 100vw; padding-top: 100px}
+.program_inner h1{color: #333; font-size: 3rem; display: flex; justify-content: center; height: 15vh; align-items: center; font-family: malssami; margin-top: 1%}
+.program_contents{width: 1400px; height: 550px; margin: 0 auto; position: relative; margin-top: 150px; opacity: 0}
+.program_box{float: left; width: 430px; height: 550px; margin-right: 55px}
+.program_box.day1{position: relative}
+.program_box.day2{position: relative}
+.program_box.day3{margin-right: 0;position: relative}
+.card{background: orange; width: 430px; height: 550px; transition: all 0.6s; backface-visibility: hidden; overflow: hidden;  box-shadow: 0px 0px 30px rgba(51,51,51,.1); }
+.card:hover{}
+.day1 .card{position: absolute}
+.day2 .card{position: absolute}
+.day3 .card{position: absolute}
+.front{background: #fff; z-index: 1}
+.back{transform: rotateY(180deg); background: #f1f1f1}
+.program_box:hover .front{transform: rotateY(-180deg)}
+.program_box:hover .back{transform: rotateY(360deg)}
+
+
+#recommend{background: #f1f1f1}
+.recommend_inner{width: 100vw; padding-top: 100px;}
+.text_slide_top_area, .text_slide_bottom_area{height: 10vh; width: 100vw; overflow: hidden}
+.text_slide_top, .text_slide_bottom{font-size: 6rem; font-family: malssami; height: 10vh; width: 100vw;}
+.text_slide_top p{line-height: 1.3; color: #dedede; width: 4000px; animation: move_text_right 200s infinite linear}
+.text_slide_bottom p{line-height: 1.3; color: #dedede; width: 4000px; animation: move_text_left 200s infinite linear}
+.text_slide_top p span, .text_slide_bottom p span{color: #cecece;}
+.recommend_contents{width: 100vw; height:68vh; position: relative}
+.recommend_wrap{position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%); width: 45vw; opacity: 0;}
+.recommend_text{float: left; text-align: left; margin-top: 10%;}
+.recommend_text h2{font-size: 2rem; margin-bottom: 8px; margin-left: 2px}
+.recommend_text h1{font-size: 3rem; font-family: extra; margin-bottom: 30px}
+.recommend_btn{}
+.recommend_btn a{display: block; width: 200px; height: 50px; background: #333; color: #f1f1f1; font-family: bold; font-size: 1.5rem; line-height: 2.1; text-align: center; border-radius: 40px; transition: all 1s}
+.recommend_btn a:hover::after{content: " >>"}
+.recommend_book_wrap{width: 20vw; float: right}
+.book_style{width: 100px; height: 250px;}
+
+@keyframes move_text_right{
+	0%{
+		transform: translateX(0)
+	}
+	50%{
+		transform: translateX(-1460px)	
+	}
+	100%{
+		transform: translateX(0)
+	}
+}
+
+@keyframes move_text_left{
+	0%{
+		transform: translateX(-1460px)
+	}
+	50%{
+		transform: translateX(0)	
+	}
+	100%{
+		transform: translateX(-1460px)
+	}
+}
+
+#notice{background: #333}
+.notice_inner{width: 100vw; padding-top: 100px;}
+.notice_inner h1{color: #f1f1f1; font-size: 3rem; display: flex; justify-content: center; height: 15vh; align-items: center; font-family: malssami; margin-top: 1%}
+.notice_contents{width: 75vw; height: 60vh; margin: 50px auto;}
+.notice_box{width: 17vw; height: 47vh; float: left; margin-right: 2.33vw; position: relative; margin-top: 370px; opacity: 0}
+.notice1{}
+.notice2{}
+.notice3{}
+.notice4{margin-right: 0}
+.notice_text{width: 17vw; height: 40vh; background: #f1f1f1; padding: 30px; box-sizing: border-box; }
+.notice_text h2{line-height: 70px; font-family: malssami; font-size: 2rem; border-bottom: 2px solid #333; padding-bottom: 15px; margin-bottom: 30px;transition: all 0.5s; position: relative; height: 70px;}
+.notice_box h2 span{position: absolute; z-index: 9}
+.notice_box h2 span.text_neon{width: 0px; height: 20px; background: #FEBF14; top: 30px; z-index: 8; transition: all 0.5s; opacity: 0}
+.notice_box h2 .text_neon.text_on{width: 200px; z-index: 8; opacity: 1}
+.notice_text h3{line-height: 1.6; font-size: 1.2rem; height: 50px;}
+.notice_text p{font-family: regular; font-size: 1.1rem; width: 14vw; height: 70px; line-height: 1.4; white-space: pre-wrap; text-overflow:ellipsis; margin-top: 30px; -webkit-line-clamp:3; -webkit-box-orient: vertical; display: -webkit-box; overflow: hidden}
+
+.notice_more{width: 17vw; height: 7vh; background: #f1f1f1;}
+.notice_more a{color: #333; display: block; width: 17vw; height: 7vh; line-height: 7vh; font-size: 1.2rem; padding-left: 20px; position: relative}
+.notice_more a span{position: absolute; z-index: 10; font-family: bold;}
+.notice_more a span.neon{background: #FEBF14; width: 0px; height: 15px; top: 33px; z-index: 8; opacity: 0; transition: all 0.5s}
+.notice_more a .neon.on{width: 100px; top: 33px; z-index: 8; opacity: 1}
